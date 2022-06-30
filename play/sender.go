@@ -63,6 +63,7 @@ func sendRequest(ctx context.Context, target *url.URL, line *logLine) error {
 
 	request.Header.Set("User-Agent", line.userAgent)
 	request.Header.Set("Host", target.Host)
+	request.Header.Set("X-Forwarded-For", line.ipclient)
 
 	log.Debugf("Sending %s", request.URL.String())
 	startTime := time.Now()

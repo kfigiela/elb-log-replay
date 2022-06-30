@@ -22,6 +22,7 @@ type logLine struct {
 	method     string
 	userAgent  string
 	statusCode int
+	ipclient string
 }
 
 // PlayLogFile plays an ELB log file at a given rate (per second)

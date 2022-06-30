@@ -35,5 +35,6 @@ func parse(line string) (*logLine, error) {
 		method:     match[12],
 		url:        match[13],
 		userAgent:  match[14],
+		ipclient:   match[3],
 	}, nil
 }
