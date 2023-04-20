@@ -62,6 +62,7 @@ func sendRequest(ctx context.Context, target *url.URL, line *logLine) error {
 	}
 
 	request.Header.Set("User-Agent", line.userAgent)
+	request.Header.Set("Accept-Language", "en-US;q=0.9,en;q=0.8")
 	request.Header.Set("Host", target.Host)
 	request.Header.Set("X-Forwarded-For", line.ipclient)
 
